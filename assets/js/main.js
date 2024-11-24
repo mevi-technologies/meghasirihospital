@@ -221,3 +221,14 @@
   new PureCounter();
 
 })()
+
+// Fade out the banner after 3 seconds
+window.onload = function () {
+  setTimeout(() => {
+    const banner = document.getElementById('anniversary-banner');
+    banner.style.opacity = '0'; // Trigger fade-out
+    setTimeout(() => {
+      banner.style.display = 'none'; // Remove from DOM after fade-out
+    }, 1000); // Wait for fade-out transition to complete (1s)
+  }, 3000); // Wait for 3 seconds before starting fade-out
+};
