@@ -1703,6 +1703,13 @@ form button:active {
       padding: 30px 15px;
   }
 
+  
+#bookAppointment form{
+  width: 100%;
+  padding: 5%;
+  /* border: 5px solid blue; */
+}
+
   form {
       padding: 15px;
   }
@@ -1835,6 +1842,7 @@ form textarea {
 
 .contact .php-email-form input {
   height: 44px;
+  text-align: center;
 }
 
 .contact .php-email-form textarea {
