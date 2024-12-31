@@ -1158,6 +1158,162 @@ section {
 }
 
 /*--------------------------------------------------------------
+# MS-Services
+--------------------------------------------------------------*/
+
+
+/* Existing styles */
+
+.ms-services {
+  padding-top: 180px;
+}
+
+#ms-services h3 {
+  margin-left: 20px;
+  font-weight: 600;
+  color: #21588d;
+}
+
+.ms-services .ms-services-item {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.ms-services .icon {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.ms-services i {
+  color: #e12454;
+}
+
+.ms-services-block .content h4 {
+  color: #2c4964;
+  font-weight: 800;
+}
+
+.ms-services-block .content p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.ms-services .content {
+  clear: both;
+}
+
+.ms-services-block {
+  padding: 20px;
+  margin-top: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 38px rgba(21, 40, 82, 0.07);
+  border-radius: 30px 0px 0px 30px;
+}
+
+.ms-services-block img {
+  width: 100%;
+  border-radius: 30px 30px 0px 30px;
+  border: 5px solid #fff;
+}
+
+.ms-services-block:hover {
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0 0 30px rgba(25, 119, 204, 0.5);
+  border-radius: 30px 0px 0px 30px;
+}
+
+.ms-services-block img {
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.ms-services-block img:hover {
+  transform: scale(0.96); /* Scales the image to 96% of its size */
+  border-radius: 30px 0px 0px 30px;
+  border: 1px dotted #00aeff;
+}
+
+
+.department-ms-services {
+  margin-bottom: 40px;
+}
+
+.department-ms-services li {
+  margin-bottom: 10px;
+}
+
+.department-ms-services li i {
+  color: #e12454;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1024px) {
+  .ms-services {
+    padding-top: 150px;
+  }
+
+  .ms-services-block {
+    margin-top: 30px;
+    border-radius: 20px; /* Adjust for medium screens */
+    box-shadow: 0 0 28px rgba(21, 40, 82, 0.1);
+  }
+
+  .ms-services-block img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ms-services {
+    padding-top: 100px;
+  }
+
+  .ms-services-block {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(21, 40, 82, 0.07);
+  }
+
+  .ms-services-block img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .ms-services-block:hover {
+    box-shadow: 0 0 25px rgba(25, 119, 204, 0.5);
+  }
+
+  /* Ensure blocks stack vertically */
+  .ms-services-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ms-services {
+    padding-top: 80px;
+  }
+
+  .ms-services-block {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(21, 40, 82, 0.05);
+  }
+
+  .ms-services-block img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
 # Doctors
 --------------------------------------------------------------*/
 .doctors {
@@ -1459,6 +1615,118 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Book Appointment
+--------------------------------------------------------------*/
+
+#bookAppointment #ba-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#bookAppointment form{
+  width: 50%;
+  padding: 5%;
+  /* border: 5px solid blue; */
+}
+
+
+/* Form Styles */
+form {
+  max-width: 600px;
+  /* background-color: #ffffff;
+  border: 1px solid #e0e0e0; */
+  background-color: #ffffff;
+  /* box-shadow: 0 0px 20px rgb(31, 188, 255); */
+  border-radius: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(12, 209, 212, 0.184);
+  text-align: center;
+}
+
+/* Labels */
+form label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* Input and Textarea */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #0080ffe4;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Button */
+form button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1977cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: #2f00ff;
+  transform: translateY(-2px);
+}
+
+form button:active {
+  background-color: #172aff;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #bookAppointment {
+      padding: 30px 15px;
+  }
+
+  form {
+      padding: 15px;
+  }
+
+  .section-title h2 {
+      font-size: 1.5rem;
+  }
+
+  .section-title p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Center the input text (e.g., dd-mm-yyyy, --:--) */
+form input[type="date"],
+form input[type="time"],
+form input[type="tel"],
+form input[type="text"],
+form textarea {
+    text-align: center; /* Centers the input values (not just the placeholder) */
+}
+
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .info {
@@ -1493,6 +1761,7 @@ section {
   margin-bottom: 0;
   font-size: 14px;
   color: #4b7dab;
+  cursor: pointer;
 }
 
 .contact .info .email,

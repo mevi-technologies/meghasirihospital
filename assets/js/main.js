@@ -219,7 +219,7 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
-
+  
 })()
 
 // Fade out the banner after 3 seconds
@@ -232,3 +232,61 @@ window.onload = function () {
     }, 1000); // Wait for fade-out transition to complete (1s)
   }, 3000); // Wait for 3 seconds before starting fade-out
 };
+
+
+/**
+ * Appointment Booking 
+ */
+
+// document.getElementById('appointmentForm').addEventListener('submit', (e) => {
+//   e.preventDefault();
+
+//   // Collect form data
+//   const name = document.getElementById('name').value;
+//   const phone = document.getElementById('phone').value;
+//   const date = document.getElementById('date').value;
+//   const time = document.getElementById('time').value;
+//   const symptoms = document.getElementById('symptoms').value;
+//   const message = document.getElementById('message').value;
+
+//   // Construct WhatsApp message
+//   const hospitalNumber = "HOSPITAL_PHONE_NUMBER"; // Replace with hospital's WhatsApp number
+//   const text = `New Appointment Booking:
+// - Name: ${name}
+// - Phone: ${phone}
+// - Date: ${date}
+// - Time: ${time}
+// - Symptoms: ${symptoms}
+// - Notes: ${message || "None"}`;
+
+//   // Open WhatsApp with the message
+//   const whatsappURL = `https://wa.me/${+918152852012}?text=${encodeURIComponent(text)}`;
+//   window.open(whatsappURL, "_blank");
+// });
+
+
+document.getElementById('appointmentForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Collect form data
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  const symptoms = document.getElementById('symptoms').value;
+  const message = document.getElementById('message').value;
+
+  // Construct WhatsApp message
+  const hospitalNumber = "+919353985244"; // Hospital's WhatsApp number with country code
+  const text = `New Appointment Booking:
+- Name: ${name}
+- Phone: ${phone}
+- Date: ${date}
+- Time: ${time}
+- Symptoms: ${symptoms || "None"}
+- Notes: ${message || "None"}`;
+
+  // Open WhatsApp with the pre-filled message
+  const whatsappURL = `https://wa.me/${hospitalNumber}?text=${encodeURIComponent(text)}`;
+  window.open(whatsappURL, "_blank");
+});
